@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" id="u0" href="https://rakko.tools/tools/129/lib/tinymce/skins/ui/oxide/content.min.css">
+<link rel="stylesheet" type="text/css" id="u1" href="https://rakko.tools/tools/129/lib/tinymce/skins/content/default/content.min.css">
+</head>
+
+<script>
+
+function omikuji() {
+	alert('おみくじを引いてよろしいですか？？？？？？？？？？？？');
+	
+	var random = Math.random();
+
+	if (random > 0.75){
+		alert('大吉だから良いことあるよ');
+	} else if (random > 0.5) {
+		alert('吉だよ。可もなく不可もないね。');
+	} else if (random > 0.25) {
+		alert('中吉だよ。だから何事も中途半端なんだよ。');
+	} else if (random > 0.05) {
+		alert('凶だよ。まぁ頑張って生きて');
+	} else {
+		daikyo();
+	}
+}
+
+
+function daikyo() {
+	const div = document.getElementById('hg');
+	div.innerHTML = '<div style="background-color: red; height: 5000px; width: 5000px; display: flex; font-size: 50px"><div>大凶なので死にます。</div></div>';
+}
+
+
+</script>
+
+
+<body id="tinymce" class="mce-content-body " data-id="content" contenteditable="true" spellcheck="false">
+<div id="hg">
+<p style="text-align: center;" data-mce-style="text-align: center;">
+しらんけどおみくじ
+</p>
+
+<p style="text-align: center;" data-mce-style="text-align: center;">
+<span style="text-decoration: underline; background-color: rgb(241, 196, 15);" data-mce-style="text-decoration: underline; background-color: #f1c40f;">
+<span style="color: rgb(224, 62, 45);" data-mce-style="color: #e03e2d;">
+<strong>
+<em onclick="omikuji()">おみくじを引く</em>
+</strong>
+</span>
+</span>
+</p>
+
+</div>
+
+</body>
+</html>
